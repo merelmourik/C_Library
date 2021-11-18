@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isprint.c                                       :+:    :+:            */
+/*   ft_isdigit.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 10:48:39 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/18 16:06:10 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/29 09:19:55 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:57:16 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+int	ft_isdigit(int i)
 {
-	if ((c >= 32 && c <= 126))
+	if (i >= '0' && i <= '9')
 		return (1);
 	return (0);
 }

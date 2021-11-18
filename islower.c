@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalnum.c                                       :+:    :+:            */
+/*   ft_islower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 10:12:38 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/18 17:40:35 by mmourik       ########   odam.nl         */
+/*   Created: 2019/11/18 13:51:29 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:56:56 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+int		ft_islower(int i)
 {
-	return (ft_isdigit(c) || ft_isalpha(c));
+	if (i >= 97 && i <= 122)
+		return (1);
+	return (0);
 }

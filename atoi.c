@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 08:57:55 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/21 10:49:46 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/29 08:57:55 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:51:18 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	nb = 0;
 	i = 0;
 	sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+	while (str[i] <= 32 || str[i] == 127)
 		i++;
 	if (str[i] == '-')
 		sign = -1;
@@ -36,6 +36,6 @@ int	ft_atoi(const char *str)
 	if (nb >= 9223372036854775807 && sign == 1)
 		return (-1);
 	if (nb > 9223372036854775807 && sign == -1)
-		return (0);
+		return (-1);
 	return (nb * sign);
 }

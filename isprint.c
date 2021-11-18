@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isupper.c                                       :+:    :+:            */
+/*   ft_isprint.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/18 13:44:18 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/18 16:06:13 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/29 10:48:39 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:57:51 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isupper(int c)
+int	ft_isprint(int c)
 {
-	return (c >= 65 && c <= 90);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

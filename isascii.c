@@ -5,14 +5,14 @@
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 10:26:51 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/18 16:05:55 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/29 10:26:51 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:57:19 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	ft_isascii(int i)
 {
-	if (c >= 0 && c <= 127)
+	if (i >= 0 && i <= 127)
 		return (1);
 	return (0);
 }

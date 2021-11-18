@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_islower.c                                       :+:    :+:            */
+/*   ft_isupper.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/18 13:51:29 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/18 16:06:03 by mmourik       ########   odam.nl         */
+/*   Created: 2019/11/18 13:44:18 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:58:36 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_islower(int c)
+int	ft_isupper(int i)
 {
-	return (c >= 97 && c <= 122);
+	if (i >= 65 && i <= 90)
+		return (1);
+	return (0);
 }

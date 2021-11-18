@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_bzero.c                                         :+:    :+:            */
+/*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 08:22:40 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/06 12:54:20 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/31 09:39:46 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/17 19:52:37 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t i;
+	char	*allocated;
+	size_t	i;
 
 	i = 0;
-	while (i < n)
+	allocated = malloc(count * size);
+	if (allocated == NULL)
+		return (NULL);
+	while (i < (size * count))
 	{
-		((char *)s)[i] = '\0';
+		allocated[i] = 0;
 		i++;
 	}
+	return (allocated);
 }
