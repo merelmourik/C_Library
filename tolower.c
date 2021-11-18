@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_tolower.c                                       :+:    :+:            */
+/*   tolower.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 11:05:09 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/20 13:31:15 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/29 11:05:09 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/18 06:40:11 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+int	ft_tolower(int i)
 {
-	if (c >= 'A' && c <= 'Z')
-		c = c + 32;
-	return (c);
+	if (i >= 'A' && i <= 'Z')
+		i = i + 32;
+	return (i);
 }

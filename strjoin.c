@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   strjoin.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/31 10:32:29 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/23 12:30:36 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/31 10:32:29 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/18 06:36:27 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *str1, char const *str2)
 {
 	size_t		i;
 	size_t		j;
 	char		*new;
 
-	if (!s1 || !s2)
+	if (!str1 || !str2)
 		return (NULL);
-	new = (char*)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	new = (char*)malloc(sizeof(char) * (ft_strlen(str1) + ft_strlen(str2) + 1));
 	if (new == NULL)
 		return (NULL);
 	j = 0;
 	i = 0;
-	while (j < ft_strlen(s1))
+	while (j < ft_strlen(str1))
 	{
-		new[j] = s1[j];
+		new[j] = str1[j];
 		j++;
 	}
-	while (i < ft_strlen(s2))
+	while (i < ft_strlen(str2))
 	{
-		new[j] = s2[i];
+		new[j + i] = str2[i];
 		i++;
-		j++;
 	}
-	new[j] = '\0';
+	new[j + i] = '\0';
 	return (new);
 }

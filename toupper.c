@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_toupper.c                                       :+:    :+:            */
+/*   toupper.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 11:00:58 by mmourik        #+#    #+#                */
-/*   Updated: 2019/11/20 13:31:19 by mmourik       ########   odam.nl         */
+/*   Created: 2019/10/29 11:00:58 by mmourik       #+#    #+#                 */
+/*   Updated: 2021/11/18 06:40:27 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_toupper(int i)
 {
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	return (c);
+	if (i >= 'a' && i <= 'z')
+		i = i - 32;
+	return (i);
 }

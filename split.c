@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   split.c                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mmourik <mmourik@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/31 14:55:55 by mmourik       #+#    #+#                 */
-/*   Updated: 2021/11/17 20:05:37 by merelmourik   ########   odam.nl         */
+/*   Updated: 2021/11/18 06:33:11 by merelmourik   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static int	word_count(char const *str, char c)
 {
 	int		i;
-	int		co;
+	int		count;
 
-	co = 0;
+	count = 0;
 	i = 0;
 	if (*str == 0)
 		return (0);
@@ -27,14 +27,14 @@ static int	word_count(char const *str, char c)
 	{
 		while (str[i] != '\0' && str[i] == c)
 			i++;
-		if (str[i] != '\0' && str[i] != c)
+		if (str[i] != '\0')
 		{
-			co++;
+			count++;
 			while (str[i] != '\0' && str[i] != c)
 				i++;
 		}
 	}
-	return (co);
+	return (count);
 }
 
 static void	*ft_free(int i, char **word)
@@ -79,7 +79,7 @@ static char	**new_string(char const *str, char c, char **arr)
 	{
 		while (*str == c && *str)
 			str++;
-		if (*str != c && *str)
+		if (*str)
 		{
 			arr[i] = word(str, c);
 			if (arr[i] == NULL)
